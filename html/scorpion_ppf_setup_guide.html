@@ -1,0 +1,87 @@
+<h2>Installation Guide</h2>
+<p>Listed below is the guide to get your plugin up and running. This plugin does not do all the work for you. You must properly configure your product, gravity form, and fields for the plugin to work properly within your site. Every site is different, and this plugin is designed to get you going, but you may need to adjust your product, form, and perhaps even your theme to fully utilize it.</p>
+<h3>1. Get Whitelisted!</h3>
+<p>This plugin integrates with a 3rd party API you will need to get your site whitelisted with. Please contact <a href="mailto:info@scorpionwindowfilm.com?subject=PPF Plugin Inquiry">Scorpion</a> to start this process!</p>
+<h3>2. Install Other Plugins</h3>
+<ol>
+	<li>Install <a href="https://wordpress.org/plugins/woocommerce/" target="_blank">WooCommerce</a> and configure it for your store. We recommend you keep WooCommerce up to date!</li>
+	<li>Install <a href="https://www.gravityforms.com/" target="_blank">Gravity Forms</a>.</li>
+	<li>Install <a href="https://woocommerce.com/products/gravity-forms-add-ons/" target="_blank">WooCommerce Gravity Forms Product Add-On</a>.</li>
+</ol>
+<h3>3. Create Your Product</h3>
+<p>You'll need a WooCommerce product to sell the kits.</p>
+<ul>
+	<li>Create a new product and set the basic properties of image, description, categories, etc. as you'd like them</li>
+	<li>Give your product a unique SKU and note that SKU for input in this admin tool</li>
+</ul>
+<h3>4. Configure the Form for your Product</h3>
+<p>Create and associate a new gravity form with the product. To associate a form to a product, go to the product and scroll down below the description box. There you will see a box called Product Data. Select the Gravity Forms tab. Select your form from the dropdown menu, or create a new one. Once a form is associated, set the following fields / specifications:
+<ul>
+	<li><strong>Year:</strong>
+		<ul>
+			<li>Type: Drop Down Field</li>
+			<li>Required: Checked</li>
+			<li>Options: One blank option </li>
+			<li>Custom CSS Class: api-year</li>
+		</ul>
+	</li>
+	<li><strong>Make</strong>
+		<ul>
+			<li>Type: Drop Down Field</li>
+			<li>Required: Checked</li>
+			<li>Options: One blank option </li>
+			<li>Custom CSS Class: api-make</li>
+			<li>Advanced: Enable Conditional Logic - <strong>SHOW</strong> field if <strong>Year is not blank</strong>.</li>
+		</ul>
+	</li>
+	<li><strong>Model</strong>
+		<ul>
+			<li>Type: Drop Down Field</li>
+			<li>Required: Checked</li>
+			<li>Options: One blank option </li>
+			<li>Custom CSS Class: api-model</li>
+			<li>Advanced: Enable Conditional Logic - <strong>SHOW</strong> field if <strong>Year is not blank</strong> AND <strong>Make is not blank</strong>.</li>
+		</ul>
+	</li>
+	<li><strong>Trim</strong>
+		<ul>
+			<li>Type: Drop Down Field</li>
+			<li>Required: Checked</li>
+			<li>Options: One blank option </li>
+			<li>Custom CSS Class: api-trim</li>
+			<li>Advanced: Enable Conditional Logic - <strong>SHOW</strong> field if <strong>Year is not blank</strong> AND <strong>Make is not blank</strong> AND <strong>Model is not blank</strong>.</li>
+		</ul>
+	</li>
+	<li><strong>Selected Patterns</strong>
+		<ul>
+			<li>Type: HTML Content</li>
+			<li>Content: [scorpion_ppf_selected_patterns]</li>
+			<li>Custom CSS Class: api-selected-patterns-list</li>
+			<li>Advanced: Enable Conditional Logic - <strong>SHOW</strong> field if <strong>Trim is not blank</strong>.</li>
+		</ul>
+	</li>
+	<li><strong>Patterns</strong>
+		<ul>
+			<li>Type: Paragraph Text</li>
+			<li>Required: Checked</li>
+			<li>Custom CSS Class: api-selected-patterns</li>
+			<li>Advanced: Enable Conditional Logic - <strong>SHOW</strong> field if <strong>Trim is not blank</strong>.</li>
+		</ul>
+	</li>
+	<li><strong>Kit Price</strong>
+		<ul>
+			<li>Type: Product</li>
+			<li>Required: Checked</li>
+			<li>Field Type: User Defined Price</li>
+			<li>Custom CSS Class: api-price</li>
+			<li>Advanced: Enable Conditional Logic - <strong>SHOW</strong> field if <strong>Trim is not blank</strong>.</li>
+		</ul>
+	</li>
+</ul>
+<p>Change a few other settings on your product as well:</p>
+<ul>
+	<li>Regular Price - set to 0</li>
+	<li>Price Labels - check the "Remove WooCommerce Price" box.</li>
+	<li>Advanced Options - uncheck the "Enable Cart Edit" checkbox.</li>
+	<li>Total Calculations - check "disable calculations", "disable subtotal"
+</ul>

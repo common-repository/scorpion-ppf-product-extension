@@ -1,0 +1,187 @@
+
+/* Customizable Product CSS */
+
+.product_tag-customizable-product .product_totals  {display:none;}
+.api-price input {background-color: #ddd;}
+.woocommerce button.button.alt:disabled, .woocommerce button.button.alt:disabled[disabled], .woocommerce button.button.alt:disabled:hover, .woocommerce button.button.alt:disabled[disabled]:hover {
+	background-color: #cccccc;
+}
+
+/* API VISIBLE FIELDS */
+.api-year select {}
+.api-make select {}
+.api-model select {}
+.api-trim select {}
+
+/* API HIDDEN FIELDS */
+/*
+.api-description{ display:none; }
+.api-photourl {display:none;}
+.api-price {display:none;}
+*/
+.api-description textarea {
+	background-color: #ddd; 
+	font-size:8pt; 
+	max-height:50px;
+}
+.api-photourl input {
+	background-color: #ddd;
+}
+#patternSelector {
+	margin:0px;
+}
+#btnSelectPatterns {
+	cursor: pointer;
+}
+
+/* The pattern container selection box */
+@media only screen and (max-width: 790px){
+	#patternSelectorContainer {
+		clear:both;
+		padding-top: 155px;
+	}
+}
+@media only screen and (min-width: 791px){
+	#patternSelectorContainer {
+		clear:both;
+		padding-top: 105px;
+	}
+}
+#cboxLoadedContent {
+	background-color: #ffffff !important;
+	padding: 0px;
+	border: 1px solid #cccccc;
+}
+#cboxContent {
+	background-color: #efefef;
+}
+
+/* Individual pattern container */
+.pattern-container { 
+	height: auto;
+	float: left; 
+	background-color: #eee;
+	border: 1px #ddd solid;
+}
+@media only screen and (min-width: 1441px){
+.pattern-container {
+		width: 23%;
+		margin: 1%;
+	}
+}
+@media only screen and (min-width: 1028px) and (max-width: 1440px){
+.pattern-container {
+		width: 31.33%;
+		margin: 1%;
+	} 
+}
+@media only screen and (min-width: 750px) and (max-width: 1027px){
+	.pattern-container {
+		width: 46%;
+		margin: 2%;
+	}
+}
+@media only screen and (max-width: 749px){
+	.pattern-container {
+		width: 94%;
+		margin: 3%;
+	}
+}
+
+/* Pattern Preview Image */
+.pattern-container .pattern-preview{}
+.pattern-container .pattern-preview img { 
+	width: 100%; 
+}
+
+/* Pattern Title */
+.pattern-container .pattern-title {
+	color: #d25327; 
+	font-weight: bold; 
+	font-size: 1.2em;
+	position: relative;
+	top: -22px;
+	left: 5px;
+	width: 98%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Pattern Checkbox and pricing */
+.pattern-container .pattern-selected {}
+.pattern-container .price {
+	color: #d25327; 
+	font-weight: bold;
+}
+.pattern-selected {
+	position: relative;
+	top: -22px;
+	zoom: 1.75;
+}
+
+/* Pattern additional details */
+.pattern-container .pattern-details{
+	font-family: monospace;
+	position: relative;
+	top: -10px;
+	left: 5px;
+	width: 98%;
+}
+.pattern-container .sqft {
+	color: #666666;
+	font-weight: bold;
+}
+.pattern-container .difficulty {
+	color: #666666;
+	font-weight: bold;
+}
+
+
+/* API MESSAGES */
+.api-patterns { background-color: #fff; }
+.api-error { 
+	background-color: red; 
+	color: white; 
+	display: none;
+}
+
+/* Pattern Pop Up Header */
+.patternSelectorHeader {
+	position: fixed;
+	z-index: 10;
+	padding: 20px 40px;
+	background-color: #efefef;
+	width: 100%;
+}
+
+/* Cart Info */
+td.product-name .no-link {
+	color: #d25327; font-weight:bold;
+}
+.woocommerce-checkout #payment ul.payment_methods li img {
+	display: none;
+}
+
+/* Hide Select Patterns */
+#ColorboxContainer {
+	display: none!important;
+}
+.api-selected-patterns {
+	display: none!important;
+}
+.api-selected-patterns-images .item {
+	width: 33%!important;
+	float: left;
+	padding: 5px;
+}
+.api-selected-patterns-images img {
+	border: 1px solid #ccc;
+}
+.api-selected-patterns-images .pattern-name {
+	font-size: 11px;
+  	white-space: nowrap;
+ 	overflow: hidden;
+  	text-overflow: ellipsis;
+  	text-align: center;
+}
